@@ -15,22 +15,6 @@
           "value": "CISControl1_1"
         }
       ]
-    },
-    {
-      "name": "CISControl1_5",
-      "API": "Intune",
-      "URL": "https://graph.microsoft.com/beta/deviceManagement/managedDevices",
-      "Parameters": {
-        "$select": "deviceId,deviceName,enrolledDateTime"
-      },
-      "StoreAs": "JSON",
-      "FrontendFields": [
-        {
-          "name": "New Intune Devices (Last 7 days)",
-          "formatter": "table",
-          "value": "CISControl1_5"
-        }
-      ]
     }
   ]
 }
