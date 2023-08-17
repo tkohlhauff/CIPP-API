@@ -1,6 +1,6 @@
 {
   "name": "CIS Analyzer - Asset Inventory and Passive Asset Discovery",
-  "style": "Tenant",
+  "style": "Table",
   "Fields": [
     {
       "name": "CISControl1_1",
@@ -12,7 +12,7 @@
         {
           "name": "Intune Registered Devices",
           "formatter": "table",
-          "value": "CISControl1_1"
+          "value": "managedDevice.deviceName"
         }
       ]
     }
