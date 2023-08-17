@@ -6,9 +6,7 @@
       "name": "DetectedApps",
       "API": "Graph",
       "URL": "https://graph.microsoft.com/v1.0/deviceManagement/detectedApps",
-      "Parameters": {
-        "$top": 100
-      },
+      "ExtractFields":["displayName","version"],
       "StoreAs": "JSON",
       "FrontendFields": [
         {
