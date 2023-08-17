@@ -4,7 +4,7 @@
   "Fields": [
     {
       "name": "CISControl1_1",
-      "API": "Intune",
+      "API": "Graph",
       "URL": "https://graph.microsoft.com/beta/deviceManagement/managedDevices",
       "ExtractFields":["deviceId","deviceName","enrolledDateTime"],
       "StoreAs": "JSON",
