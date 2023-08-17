@@ -6,13 +6,23 @@
       "name": "CISControl1_1",
       "API": "Graph",
       "URL": "https://graph.microsoft.com/beta/deviceManagement/managedDevices",
-      "ExtractFields":["deviceId","deviceName","enrolledDateTime"],
+      "ExtractFields":["azureADDeviceId","deviceName","enrolledDateTime"],
       "StoreAs": "JSON",
       "FrontendFields": [
         {
           "name": "Intune Registered Devices",
-          "formatter": "table",
-          "value": "managedDevice.deviceName"
+          "formatter": "string",
+          "value": "CISControl1_1.deviceName"
+        },
+        {
+          "name": "Enrolled Date",
+          "formatter": "string",
+          "value": "CISControl1_1.enrolledDateTime"
+        },
+        {
+          "name": "Intune Device ID",
+          "formatter": "string",
+          "value": "CISControl1_1.azureADDeviceId"
         }
       ]
     }
