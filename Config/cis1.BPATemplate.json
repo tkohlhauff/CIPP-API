@@ -5,7 +5,7 @@
     {
       "name": "CISControl1_1",
       "API": "Intune",
-      "URL": "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices",
+      "URL": "https://graph.microsoft.com/beta/deviceManagement/managedDevices",
       "Parameters": {
         "$filter": "enrolledDateTime ne null",
         "$select": "deviceId,deviceName,enrolledDateTime"
@@ -22,7 +22,7 @@
     {
       "name": "CISControl1_5",
       "API": "Intune",
-      "URL": "https://graph.microsoft.com/v1.0/deviceManagement/managedDevices",
+      "URL": "https://graph.microsoft.com/beta/deviceManagement/managedDevices",
       "Parameters": {
         "$select": "deviceId,deviceName,enrolledDateTime"
       },
