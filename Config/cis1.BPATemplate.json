@@ -1,16 +1,18 @@
 {
   "name": "CIS Analyzer - Asset Inventory and Passive Asset Discovery",
-  "style": "Table",
+  "style": "Tenant",
   "Fields": [
     {
-      "name": "managedDevices",
-      "UseExistingInfo": "true",
+      "name": "CISControl1_1",
+      "API": "Graph",
+      "URL": "https://graph.microsoft.com/beta/deviceManagement/managedDevices",
+      "ExtractFields":["deviceId","deviceName","enrolledDateTime"],
       "StoreAs": "JSON",
       "FrontendFields": [
         {
           "name": "Intune Registered Devices",
           "formatter": "table",
-          "value": "managedDevices"
+          "value": "CISControl1_1"
         }
       ]
     }
