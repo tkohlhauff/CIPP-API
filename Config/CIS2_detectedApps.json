@@ -1,0 +1,22 @@
+{
+  "name": "CIS Analyzer - Detected Apps Inventory",
+  "style": "Table",
+  "Fields": [
+    {
+      "name": "DetectedApps",
+      "API": "Graph",
+      "URL": "https://graph.microsoft.com/v1.0/deviceManagement/detectedApps",
+      "Parameters": {
+        "$top": 100
+      },
+      "StoreAs": "JSON",
+      "FrontendFields": [
+        {
+          "name": "Detected Apps",
+          "formatter": "table",
+          "value": "DetectedApps"
+        }
+      ]
+    }
+  ]
+}
