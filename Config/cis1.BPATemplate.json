@@ -6,10 +6,7 @@
       "name": "CISControl1_1",
       "API": "Intune",
       "URL": "https://graph.microsoft.com/beta/deviceManagement/managedDevices",
-      "Parameters": {
-        "$filter": "enrolledDateTime ne null",
-        "$select": "deviceId,deviceName,enrolledDateTime"
-      },
+      "ExtractFields":["deviceId","deviceName","enrolledDateTime"]
       "StoreAs": "JSON",
       "FrontendFields": [
         {
