@@ -1,5 +1,5 @@
 {
-  "name": "CIS Control 1 Benchmark",
+  "name": "CIS Control Benchmark",
   "style": "Tenant",
   "Fields": [
    { 
@@ -17,15 +17,15 @@
     ]
    },
    { 
-    "name": "aadUsers",
+    "name": "detectedApps",
     "API": "Graph",
-    "URL": "https://graph.microsoft.com/beta/users",
-    "ExtractFields": ["displayName", "mail"],
+    "URL": "https://graph.microsoft.com/beta/deviceManagement/detectedApps",
+    "ExtractFields": ["displayName", "DeviceCount","Version"],
     "StoreAs": "JSON",
     "FrontendFields": [
       {
-        "name":"AAD Users",
-        "value":"aadUsers",
+        "name":"2.1 - Establish and Maintain a Software Inventory",
+        "value":"detectedApps",
         "formatter":"table"
       }
     ]
