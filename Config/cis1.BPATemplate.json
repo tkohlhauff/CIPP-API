@@ -6,13 +6,26 @@
     "name": "IntuneDevices",
     "API": "Graph",
     "URL": "https://graph.microsoft.com/beta/deviceManagement/managedDevices",
-    "Parameters": {"asApp": "True"},
     "ExtractFields": ["deviceName", "osVersion"],
     "StoreAs": "JSON",
     "FrontendFields": [
       {
         "name":"Intune Enrolled Devices",
         "value":"IntuneDevices",
+        "formatter":"table"
+      }
+    ]
+   },
+   { 
+    "name": "aadUsers",
+    "API": "Graph",
+    "URL": "https://graph.microsoft.com/beta/users",
+    "ExtractFields": ["displayName", "mail"],
+    "StoreAs": "JSON",
+    "FrontendFields": [
+      {
+        "name":"AAD Users",
+        "value":"aadUsers",
         "formatter":"table"
       }
     ]
