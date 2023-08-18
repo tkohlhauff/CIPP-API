@@ -1,16 +1,16 @@
 {
-  "name": "Intune Overview",
+  "name": "CIS Control 1 Benchmark",
   "style": "Tenant",
   "Fields": [
    { 
     "name": "IntuneDevices",
     "API": "Graph",
     "URL": "https://graph.microsoft.com/beta/deviceManagement/managedDevices",
-    "ExtractFields": ["deviceName", "osVersion"],
+    "ExtractFields": ["deviceName", "osVersion","userDisplayName","EthernetMacAddress","WiFiMacAddress"],
     "StoreAs": "JSON",
     "FrontendFields": [
       {
-        "name":"Intune Enrolled Devices",
+        "name":"1.1 - Maintain Detailed Enterprise Asset Inventory",
         "value":"IntuneDevices",
         "formatter":"table"
       }
